@@ -3,7 +3,8 @@
 let result;
 let start = false; // check if user starts the game
 
-const btnCheck = document.querySelector(".check");
+// const btnCheck = document.querySelector(".check");
+const guessForm = document.querySelector("#guess-form")
 const btnAgain = document.querySelector(".again");
 const number = document.querySelector(".number");
 const message = document.querySelector(".message");
@@ -38,12 +39,14 @@ btnAgain.addEventListener("click", () => {
   generateResult();
 });
 
-btnCheck.addEventListener("click", () => {
+guessForm.addEventListener("submit", e => {
+  e.preventDefault();
   start = true;
   const guess = Number(document.querySelector(".guess").value);
   // No input
   if (!guess) {
     console.log("No number!");
+    message.innerText = "Enter a number!"
   }
   // Guess is different from result
   else if (guess !== result) {
