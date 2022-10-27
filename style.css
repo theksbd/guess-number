@@ -35,6 +35,9 @@ main {
 
 .left {
   width: 52rem;
+}
+
+.left > form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -106,7 +109,13 @@ h1 {
 }
 
 .btn:hover {
-  background-color: #ccc;
+  background-color: #bbb;
+}
+
+.btn:active {
+  transform: translateY(4px);
+  padding: calc( 2rem - 0.5px ) calc( 3rem - 1px );
+  margin-top: 1px;
 }
 
 .message {
