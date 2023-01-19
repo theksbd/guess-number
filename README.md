@@ -1,4 +1,4 @@
-# Guess number
+# Guess Number
 A simple website to play Guess Number game using HTML, CSS and JS
 
 # Live site
